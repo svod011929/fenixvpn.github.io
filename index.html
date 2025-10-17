@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fenix VPN - киберпанк защита, военное шифрование, безлимитная скорость. От 97₽/месяц.">
+    <meta name="keywords" content="VPN, Fenix VPN, Vless, Outline, ShadowSocks, анонимность">
+    <title>FENIX VPN 🔥 | Возрождай свою свободу в сети</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* === CSS Variables === */
+        :root {
+            --primary-blue: #3B82F6;
+            --primary-purple: #8B5CF6;
+            --primary-indigo: #6366F1;
+            --neon-cyan: #00D9FF;
+            --neon-pink: #FF006E;
+            --neon-green: #00FF94;
+            --bg-dark: #0F0F23;
+            --bg-darker: #1A1A2E;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0AEC0;
+        }
+        
+        /* === Reset & Base === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* === Background Effects === */
+        .bg-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            background: var(--neon-cyan);
+            border-radius: 50%;
+            animation: float 15s infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+            50% { transform: translateY(-100px) translateX(50px); opacity: 0.8; }
+        }
+        
+        /* === Container === */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* === Header/Navigation === */
+        header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px var(--neon-cyan);
+        }
+        
+        /* === Hero Section === */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            animation: pulse 10s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.5; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--neon-cyan), var(--primary-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(0, 217, 255, 0.6);
+            animation: glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.4)); }
+            50% { filter: drop-shadow(0 0 40px rgba(0, 217, 255, 0.8)); }
+        }
+        
+        .hero-tagline {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--neon-cyan);
+            font-weight: 600;
+        }
+        
+        .hero-subtext {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* === Buttons === */
+        .btn {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            color: white;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--neon-cyan);
+            border: 2px solid var(--neon-cyan);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--neon-cyan);
+            color: var(--bg-dark);
+            box-shadow: 0 0 20px var(--neon-cyan);
+        }
+        
+        /* === Section === */
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* === Grid Layout === */
+        .grid {
+            display: grid;
+            gap: 30px;
+        }
+        
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        
+        /* === Cards === */
+        .card {
+            background: rgba(26, 26, 46, 0.6);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);
+        }
+        
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--neon-cyan);
+        }
+        
+        .card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* === Protocols Section === */
+        .protocol-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            border: 2px solid var(--primary-blue);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .protocol-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+        }
+        
+        .protocol-icon {
+            font-size: 64px;
+            margin-bottom: 15px;
+        }
+        
+        .protocol-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+        }
+        
+        .protocol-desc {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+        
+        /* === Pricing Cards === */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background: rgba(26, 26, 46, 0.8);
+            border: 2px solid rgba(0, 217, 255, 0.3);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .pricing-card.popular {
+            border-color: var(--neon-cyan);
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(0, 217, 255, 0.4);
+            background: rgba(59, 130, 246, 0.1);
+        }
+        
+        .pricing-card.popular::before {
+            content: 'ПОПУЛЯРНЫЙ ⭐';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--neon-cyan), var(--primary-blue));
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 50px rgba(59, 130, 246, 0.5);
+        }
+        
+        .pricing-card.popular:hover {
+            transform: scale(1.08) translateY(-10px);
+        }
+        
+        .plan-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--neon-cyan);
+            margin-bottom: 15px;
+        }
+        
+        .plan-price {
+            font-size: 48px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 5px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .plan-price span {
+            font-size: 24px;
+            color: var(--text-secondary);
+        }
+        
+        .plan-per-month {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+        
+        .plan-discount {
+            display: inline-block;
+            background: var(--neon-pink);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .plan-features li {
+            padding: 10px 0;
+            color: var(--text-secondary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .plan-features li::before {
+            content: '✓';
+            color: var(--neon-green);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* === Comparison Table === */
+        .comparison-table {
+            overflow-x: auto;
+            margin-top: 40px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(26, 26, 46, 0.6);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        th {
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        td {
+            color: var(--text-secondary);
+        }
+        
+        .highlight-col {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--neon-cyan);
+            font-weight: 600;
+        }
+        
+        /* === Server Locations === */
+        .server-notice {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+            border: 2px solid var(--neon-cyan);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .server-notice h3 {
+            color: var(--neon-cyan);
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .server-notice p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .server-card {
+            background: rgba(26, 26, 46, 0.6);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .server-info h4 {
+            color: var(--neon-cyan);
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .server-details {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        .server-status {
+            background: var(--neon-green);
+            color: var(--bg-dark);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        /* === Testimonials === */
+        .testimonial-card {
+            background: rgba(26, 26, 46, 0.6);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+        }
+        
+        .stars {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial-text {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .author-name {
+            color: var(--neon-cyan);
+            font-weight: 600;
+        }
+        
+        .author-date {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* === FAQ === */
+        .faq-item {
+            background: rgba(26, 26, 46, 0.6);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 12px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(0, 217, 255, 0.1);
+        }
+        
+        .faq-question h3 {
+            color: var(--neon-cyan);
+            font-size: 18px;
+        }
+        
+        .faq-icon {
+            font-size: 24px;
+            color: var(--neon-cyan);
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer-content {
+            padding: 0 20px 20px 20px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* === Final CTA === */
+        .final-cta {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+            border: 2px solid var(--neon-cyan);
+            border-radius: 16px;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            color: var(--neon-cyan);
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid var(--neon-cyan);
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: var(--neon-cyan);
+            font-weight: 600;
+        }
+        
+        /* === Footer === */
+        footer {
+            background: var(--bg-darker);
+            padding: 40px 0 20px 0;
+            border-top: 1px solid rgba(0, 217, 255, 0.2);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--neon-cyan);
+        }
+        
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        /* === Responsive === */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+            
+            .hero-tagline {
+                font-size: 22px;
+            }
+            
+            .hero-subtext {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+            
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Particles -->
+    <div class="bg-particles" id="particles"></div>
+    
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">FENIX VPN 🔥</div>
+            <ul class="nav-links">
+                <li><a href="#benefits">Преимущества</a></li>
+                <li><a href="#pricing">Тарифы</a></li>
+                <li><a href="#servers">Серверы</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>FENIX VPN 🔥</h1>
+                <p class="hero-tagline">Возрождай свою свободу в сети</p>
+                <p class="hero-subtext">Киберпанк защита. Военное шифрование. Безлимитная скорость.</p>
+                <div class="cta-buttons">
+                    <a href="https://t.me/fx_vpnshop_bot?start=ODA1NDcxMDQ4NA" class="btn btn-primary">Купить подписку</a>
+                    <a href="#pricing" class="btn btn-secondary">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Key Benefits -->
+    <section id="benefits">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Максимальная Скорость</h3>
+                    <p>До 1 Гбит/с благодаря современным протоколам и оптимизированным серверам</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>3 Протокола</h3>
+                    <p>Vless, Outline и ShadowSocks для разных уровней защиты и анонимности</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <h3>Лучшая Цена</h3>
+                    <p>От 97₽/месяц — самая выгодная цена при высоком качестве сервиса</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Все Платформы</h3>
+                    <p>Windows, Mac, Linux, Android, iOS — защита для всех устройств</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎮</div>
+                    <h3>Низкий Ping</h3>
+                    <p>Оптимизация для геймеров — играйте без задержек и лагов</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎬</div>
+                    <h3>Стриминг</h3>
+                    <p>Смотрите Netflix, YouTube, Twitch в 4K без буферизации</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Protocols Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Поддерживаемые Протоколы</h2>
+            <div class="grid grid-3">
+                <div class="protocol-card">
+                    <div class="protocol-icon">🛡️</div>
+                    <div class="protocol-name">Vless</div>
+                    <p class="protocol-desc">Считается самым анонимным VPN 🛡</p>
+                </div>
+                <div class="protocol-card">
+                    <div class="protocol-icon">✅</div>
+                    <div class="protocol-name">Outline</div>
+                    <p class="protocol-desc">Надежно шифрует и скрывает весь трафик ✅</p>
+                </div>
+                <div class="protocol-card">
+                    <div class="protocol-icon">🔐</div>
+                    <div class="protocol-name">ShadowSocks</div>
+                    <p class="protocol-desc">Имеет те же преимущества что и Outline но работает через такой же клиент что и у Vless</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Security Features -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Функции Безопасности</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">🔐</div>
+                    <h3>AES-256 Шифрование</h3>
+                    <p>Военный стандарт шифрования, используемый спецслужбами и банками по всему миру</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Kill Switch</h3>
+                    <p>Автоматическая блокировка трафика при обрыве VPN для защиты вашей конфиденциальности</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚫</div>
+                    <h3>Zero Logs Policy</h3>
+                    <p>Мы не храним никаких логов вашей активности, IP-адресов или истории посещений</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>DNS Leak Protection</h3>
+                    <p>Защита от утечек DNS запросов гарантирует полную анонимность в сети</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Multi-Protocol Support</h3>
+                    <p>Vless, Outline и ShadowSocks для максимальной гибкости и безопасности</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>DDoS Protection</h3>
+                    <p>Встроенная защита от DDoS атак для стабильного и безопасного соединения</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title">Выберите свой тариф</h2>
+            <div class="pricing-grid">
+                <!-- Plan 1: 1 месяц -->
+                <div class="pricing-card">
+                    <div class="plan-name">1 месяц</div>
+                    <div class="plan-price">110<span>₽</span></div>
+                    <div class="plan-per-month">110₽/месяц</div>
+                    <ul class="plan-features">
+                        <li>Vless протокол</li>
+                        <li>Outline протокол</li>
+                        <li>ShadowSocks протокол</li>
+                        <li>1 устройство</li>
+                        <li>Сервер в Германии</li>
+                        <li>AES-256 шифрование</li>
+                        <li>Kill Switch</li>
+                        <li>Безлимитный трафик</li>
+                    </ul>
+                    <a href="https://t.me/fx_vpnshop_bot?start=ODA1NDcxMDQ4NA" class="btn btn-primary">Выбрать тариф</a>
+                </div>
+                
+                <!-- Plan 2: 3 месяца (Popular) -->
+                <div class="pricing-card popular">
+                    <div class="plan-name">3 месяца</div>
+                    <div class="plan-price">320<span>₽</span></div>
+                    <div class="plan-per-month">107₽/месяц</div>
+                    <div class="plan-discount">Экономия 3%</div>
+                    <ul class="plan-features">
+                        <li>Vless протокол</li>
+                        <li>Outline протокол</li>
+                        <li>ShadowSocks протокол</li>
+                        <li>3 устройства</li>
+                        <li>Сервер в Германии</li>
+                        <li>AES-256 шифрование</li>
+                        <li>Kill Switch</li>
+                        <li>Безлимитный трафик</li>
+                        <li>Приоритетная поддержка</li>
+                    </ul>
+                    <a href="https://t.me/fx_vpnshop_bot?start=ODA1NDcxMDQ4NA" class="btn btn-primary">Выбрать тариф</a>
+                </div>
+                
+                <!-- Plan 3: 6 месяцев -->
+                <div class="pricing-card">
+                    <div class="plan-name">6 месяцев</div>
+                    <div class="plan-price">620<span>₽</span></div>
+                    <div class="plan-per-month">103₽/месяц</div>
+                    <div class="plan-discount">Экономия 6%</div>
+                    <ul class="plan-features">
+                        <li>Vless протокол</li>
+                        <li>Outline протокол</li>
+                        <li>ShadowSocks протокол</li>
+                        <li>5 устройств</li>
+                        <li>Сервер в Германии</li>
+                        <li>AES-256 шифрование</li>
+                        <li>Kill Switch</li>
+                        <li>Безлимитный трафик</li>
+                        <li>Приоритетная поддержка</li>
+                        <li>Без логов</li>
+                    </ul>
+                    <a href="https://t.me/fx_vpnshop_bot?start=ODA1NDcxMDQ4NA" class="btn btn-primary">Выбрать тариф</a>
+                </div>
+                
+                <!-- Plan 4: 1 год -->
+                <div class="pricing-card">
+                    <div class="plan-name">1 год</div>
+                    <div class="plan-price">1160<span>₽</span></div>
+                    <div class="plan-per-month">97₽/месяц</div>
+                    <div class="plan-discount">Экономия 12%</div>
+                    <ul class="plan-features">
+                        <li>Vless протокол</li>
+                        <li>Outline протокол</li>
+                        <li>ShadowSocks протокол</li>
+                        <li>Безлимит устройств</li>
+                        <li>Сервер в Германии</li>
+                        <li>AES-256 шифрование</li>
+                        <li>Kill Switch</li>
+                        <li>Безлимитный трафик</li>
+                        <li>24/7 VIP поддержка</li>
+                        <li>Без логов</li>
+                        <li>Приоритет при расширении</li>
+                    </ul>
+                    <a href="https://t.me/fx_vpnshop_bot?start=ODA1NDcxMDQ4NA" class="btn btn-primary">Выбрать тариф</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Server Locations -->
+    <section id="servers">
+        <div class="container">
+            <h2 class="section-title">Локации Серверов</h2>
+            
+            <div class="server-notice">
+                <h3>🚀 Расширение географии</h3>
+                <p>В настоящее время доступен надежный сервер в Германии. Мы активно работаем над добавлением новых локаций!<br>
+                Следите за обновлениями - скоро будут доступны серверы в США, Нидерландах, Сингапуре и других странах.</p>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="server-card">
+                    <div class="server-info">
+                        <h4>🇩🇪 Германия</h4>
+                        <div class="server-details">
+                            Франкфурт • 3 сервера • Ping: ~25ms
+                        </div>
+                    </div>
+                    <div class="server-status">Активно</div>
+                </div>
+                
+                <div class="server-card" style="opacity: 0.6;">
+                    <div class="server-info">
+                        <h4>🌍 Скоро</h4>
+                        <div class="server-details">
+                            Новые локации добавляются
+                        </div>
+                    </div>
+                    <div class="server-status" style="background: var(--text-secondary);">В разработке</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Comparison Table -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Сравнение с конкурентами</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Характеристика</th>
+                            <th class="highlight-col">Fenix VPN</th>
+                            <th>Конкурент A</th>
+                            <th>Конкурент B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Скорость</td>
+                            <td class="highlight-col">До 1 Гбит/с</td>
+                            <td>До 500 Мбит/с</td>
+                            <td>До 300 Мбит/с</td>
+                        </tr>
+                        <tr>
+                            <td>Цена (месяц)</td>
+                            <td class="highlight-col">От 97₽</td>
+                            <td>От 400₽</td>
+                            <td>От 350₽</td>
+                        </tr>
+                        <tr>
+                            <td>Серверов</td>
+                            <td class="highlight-col">Германия (расширяется)</td>
+                            <td>35</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Протоколы</td>
+                            <td class="highlight-col">Vless, Outline, ShadowSocks</td>
+                            <td>OpenVPN, IKEv2</td>
+                            <td>WireGuard</td>
+                        </tr>
+                        <tr>
+                            <td>Устройств</td>
+                            <td class="highlight-col">До безлимит</td>
+                            <td>5</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Kill Switch</td>
+                            <td class="highlight-col">✓</td>
+                            <td>✓</td>
+                            <td>✗</td>
+                        </tr>
+                        <tr>
+                            <td>Без логов</td>
+                            <td class="highlight-col">✓</td>
+                            <td>✓</td>
+                            <td>?</td>
+                        </tr>
+                        <tr>
+                            <td>DDoS защита</td>
+                            <td class="highlight-col">✓</td>
+                            <td>✗</td>
+                            <td>✗</td>
+                        </tr>
+                        <tr>
+                            <td>Поддержка 24/7</td>
+                            <td class="highlight-col">✓</td>
+                            <td>Только email</td>
+                            <td>9-18 МСК</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            <div class="grid grid-3">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Лучший VPN для стриминга! Никаких лагов при просмотре 4K контента. Скорость просто космическая!"</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Алексей М.</span>
+                        <span class="author-date">Октябрь 2025</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Пользуюсь уже полгода. Отличное соотношение цены и качества. Поддержка всегда на связи и помогает решить любые вопросы."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Мария К.</span>
+                        <span class="author-date">Сентябрь 2025</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Работаю удалённо, нужна была безопасная связь. Fenix VPN решил все мои проблемы. Стабильное подключение и высокая скорость."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Дмитрий В.</span>
+                        <span class="author-date">Август 2025</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Очень простой в использовании, настроила сама за 2 минуты. Киберпанк дизайн приложения просто огонь! 🔥"</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Елена С.</span>
+                        <span class="author-date">Октябрь 2025</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Феникс VPN - настоящая находка! Отличная цена, быстрые серверы, никаких логов. Рекомендую всем!"</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Игорь П.</span>
+                        <span class="author-date">Сентябрь 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Что такое VPN и зачем он нужен?</h3>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        VPN (Virtual Private Network) — это технология, которая создаёт защищённое соединение между вашим устройством и интернетом. VPN шифрует весь ваш трафик, скрывает IP-адрес и защищает личные данные от хакеров, провайдеров и рекламодателей.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Какие протоколы поддерживает Fenix VPN?</h3>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Мы поддерживаем 3 современных протокола: Vless (самый анонимный), Outline (надежное шифрование) и ShadowSocks (работает через тот же клиент что и Vless). Вы можете выбрать любой протокол в зависимости от ваших потребностей.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Как быстро работает Fenix VPN?</h3>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Fenix VPN обеспечивает скорость до 1 Гбит/с. Благодаря оптимизированным серверам в Германии и мощной инфраструктуре, вы не заметите замедления при просмотре видео, играх или загрузке файлов.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>На скольких устройствах можно использовать VPN?</h3>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Зависит от тарифа: 1 месяц (1 устройство), 3 месяца (3 устройства), 6 месяцев (5 устройств), 1 год (безлимит устройств). Вы можете подключить компьютеры, смартфоны и планшеты.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Хранит ли Fenix VPN логи моей активности?</h3>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Нет! Мы придерживаемся строгой политики No-Logs. Мы не храним историю посещений, IP-адреса, временные метки подключений или любую другую информацию о вашей онлайн-активности.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Как купить подписку Fenix VPN?</h3>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Очень просто! Нажмите кнопку 'Купить' под любым тарифом, вы будете перенаправлены в наш Telegram бот, где сможете выбрать способ оплаты (карта, криптовалюта) и мгновенно получить доступ к VPN.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>В каких странах доступны серверы?</h3>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        В настоящее время у нас работают надежные серверы в Германии (Франкфурт). Мы активно работаем над расширением географии - скоро добавим серверы в США, Нидерландах, Сингапуре и других странах. Следите за обновлениями!
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Что такое Kill Switch?</h3>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Kill Switch — это функция безопасности, которая автоматически блокирует интернет-соединение, если VPN-подключение неожиданно прервётся. Это предотвращает утечку вашего реального IP-адреса и защищает конфиденциальность.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Поддерживает ли Fenix VPN торренты?</h3>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Да! Мы поддерживаем P2P и торрент-трафик. Используйте безлимитную пропускную способность для безопасной и быстрой загрузки файлов.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Есть ли пробный период?</h3>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Вы можете начать с минимального тарифа 1 месяц за 110₽. Если VPN вам не подошёл, просто не продлевайте подписку. Мы также предлагаем выгодные долгосрочные тарифы с экономией до 12%.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section>
+        <div class="container">
+            <div class="final-cta">
+                <h2>Начни защищать свою свободу прямо сейчас</h2>
+                <a href="https://t.me/fx_vpnshop_bot?start=ODA1NDcxMDQ4NA" class="btn btn-primary" style="font-size: 20px; padding: 18px 50px;">Купить в Telegram боте</a>
+                <div class="trust-badges">
+                    <div class="badge">7 дней гарантия возврата</div>
+                    <div class="badge">Без логов</div>
+                    <div class="badge">AES-256</div>
+                    <div class="badge">Kill Switch</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">FENIX VPN 🔥</div>
+                <ul class="footer-links">
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                    <li><a href="https://t.me/fx_vpnshop_bot?start=ODA1NDcxMDQ4NA">Поддержка</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                © 2025 Fenix VPN. Все права защищены.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Generate particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.width = Math.random() * 5 + 2 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = Math.random() * 10 + 10 + 's';
+                container.appendChild(particle);
+            }
+        }
+        
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Initialize
+        window.addEventListener('load', createParticles);
+    </script>
+</body>
+</html>
